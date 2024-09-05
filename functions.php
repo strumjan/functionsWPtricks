@@ -76,10 +76,10 @@ function check_cart_session() {
 							$dodatak_za_nadzemni_dio = 3/5;
 							break;
 						case 19 :
-							$dodatak_za_nadzemni_dio = 1/6;
+							$dodatak_za_nadzemni_dio = 5/7;
 							break;
 						default :
-						$dodatak_za_nadzemni_dio = 1/6;
+						$dodatak_za_nadzemni_dio = 5/7;
 					}
                 } else {
 					$promjer_posude = 10.5;
