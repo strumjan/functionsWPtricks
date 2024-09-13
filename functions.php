@@ -16,6 +16,7 @@ add_action('woocommerce_checkout_init', 'check_cart_session'); // when entering 
 //add_action('woocommerce_after_cart_item_quantity_update', 'check_cart_session', 20, 4); // when updating the quantity in the Cart
 
 function check_cart_session() {
+if(!is_admin()){
     // Get the user's session
     $session = WC()->session;
 
@@ -115,6 +116,7 @@ function check_cart_session() {
     } else {
         echo "Cart is empty.";
     }
+	}
 }
 
 // Calculation of how much it collects in a box
