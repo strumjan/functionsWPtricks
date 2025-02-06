@@ -1,15 +1,3 @@
-//Hide Shipping on the Cart page
-add_filter( 'woocommerce_cart_needs_shipping', 'filter_cart_needs_shipping' );
-function filter_cart_needs_shipping( $needs_shipping ) {
-    if ( is_cart() ) {
-        $needs_shipping = false;
-		echo "<style>tr.cart-subtotal {display: none !important;}</style>";
-    }
-    return $needs_shipping;
-}
-
-
-
 // Addition of delivery according to the number of boxes, depending on the size of the pots
 add_action('woocommerce_checkout_init', 'check_cart_session'); // when entering Checkout
 //add_action('woocommerce_cart_actions', 'check_cart_session'); // when entering the Cart
